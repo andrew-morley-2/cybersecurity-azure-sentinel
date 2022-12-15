@@ -8,7 +8,7 @@ In this project, I will set up Microsoft Sentinel (SIEM) and connect it to a liv
 # Utilities Used
 
 - <b>Azure Portal</b>
-- <b>GeoLocation API</b>
+- <b>Geolocation API</b>
 
 # Services Used
 
@@ -51,3 +51,45 @@ In this project, I will set up Microsoft Sentinel (SIEM) and connect it to a liv
 - <b>Add Microsoft Sentinel to your workspace. </b>
 
 <img src="https://i.imgur.com/h0XZdI8.jpg" alt="Add Microsoft Sentinel">
+
+# Section Four: Geolocation API Setup
+
+- <b>RDP to your honeypot VM. </b>
+
+<img src="https://i.imgur.com/3awy2CD.jpg" alt="VM RDP">
+
+- <b>Open Event Viewer on your VM and find a failed RDP attempt. </b>
+
+<img src="https://i.imgur.com/XLuUFvl.jpg" alt="Event Viewer">
+
+- <b>Create Geolocation API at ipgeolocation.io and add it to PowerShell script. The script will look up the attackers Geolocation information. Run the script. </b>
+
+<img src="https://i.imgur.com/rQOczM6.png" alt="GeoLocation Script">
+
+# Section Five: Custom Logs in Log Analytics Workspaces
+
+- <b>Create a custom log for failed RDP attempts. </b>
+
+<img src="https://i.imgur.com/HPqfIV2.jpg" alt="Create Custom Log">
+
+- <b>Run query on custom log. Select extract fields to refine the raw data. </b>
+
+<img src="https://i.imgur.com/hguNIjS.jpg" alt="Extract Fields">
+
+- <b>Define custom fields one by one for the following: latitude, longitude, destinationhost, username, sourcehost, state, country, timestamp, and label. </b>
+
+<img src="https://i.imgur.com/xWDDoZe.jpg" alt="Custom Fields">
+
+# Section Six: Microsoft Sentinel Setup
+
+- <b>Create new workbook in Microsoft Sentinel based on custom logs and custom fields. </b>
+
+<img src="https://i.imgur.com/TppN6hu.jpg" alt="Create Workbook">
+
+- <b>Add map to workbook based on custom fields. Let PowerShell script run for several hours as attackers around the world attempt to brute force an RDP connection to your VM. </b>
+
+# Section Seven: Results
+
+- <b>Open your workbook in Microsoft Sentinel after several hours have passed and view the map of all the failed RDP attempts based on Geolocation. </b>
+
+<img src="https://i.imgur.com/zGl4vdF.jpg" alt="Geolocation Map">
