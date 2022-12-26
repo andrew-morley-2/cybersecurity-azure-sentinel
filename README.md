@@ -93,3 +93,13 @@ In this project, I will set up Microsoft Sentinel (SIEM) and connect it to a liv
 - <b>Open your workbook in Microsoft Sentinel after several hours have passed and view the map of all the failed RDP attempts based on Geolocation. </b>
 
 <img src="https://i.imgur.com/zGl4vdF.jpg" alt="Geolocation Map">
+
+# Section Eight: Summary
+
+<b>In this project, I set up Microsoft Sentinel (SIEM) in Microsoft Azure and connected it to a live virtual machine acting as a honey pot. I then observed live attacks (RDP Brute Force) from all around the world. I used a custom PowerShell script to look up the attackers Geolocation information and plot it on the Azure Sentinel Map.
+
+This project was a great learning experience for me as it taught me the importance of setting up a secure cloud environment and how to use SIEM to detect malicious activity. I was able to understand how to use a Geolocation API and how to use Microsoft Sentinel to create custom logs, custom fields, and workbooks.
+
+The challenges that I faced while completing this project included understanding the Microsoft Sentinel user interface, understanding how to set up a virtual machine as a honey pot with the appropriate (lack of) network security, and understanding how to use the Geolocation API in conjunction with my workbook.
+
+Overall, this project has been an enjoyable experience and I have learned a great deal. I now have a better understanding of how to use Microsoft Sentinel and how to use a Geolocation API to correlate data points visually. I have also gained a better understanding of the importance of setting up a secure cloud environment and how to detect malicious activity in a more proficient manner. </b>
